@@ -32,11 +32,9 @@ export default function Nav() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Link
-            href="/"
-            className="font-heading text-lg font-semibold tracking-[0.12em] uppercase text-[var(--gold)]"
-          >
-            Metoda JIH<span className="align-super text-[0.6em]">®</span>
+          <Link href="/" aria-label="Metoda JIH® — úvod" className="flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo-jih.png" alt="Metoda JIH®" className="h-11 w-auto" />
           </Link>
 
           {/* Desktop nav */}

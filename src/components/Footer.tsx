@@ -15,9 +15,8 @@ export default function Footer() {
     <footer className="bg-[var(--cream)] border-t border-[var(--gold-light)] py-12 mt-auto">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="font-heading text-base font-semibold tracking-[0.15em] uppercase text-[var(--gold)]">
-            Metoda JIH<span className="align-super text-[0.6em]">®</span>
-          </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/logo-jih.png" alt="Metoda JIH®" className="h-14 w-auto" />
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs tracking-[0.2em] uppercase">
             {footerLinks.map((l) => (
               <Link
