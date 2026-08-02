@@ -41,8 +41,11 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-center">
-            © {new Date().getFullYear()} Terapeutická metoda JIH®. Autorská metoda Jarky Matuškové.
+            © {new Date().getFullYear()} freli s.r.o. · Autorská metoda Jarky Matuškové.
             Všechna práva vyhrazena.
+          </p>
+          <p className="text-center text-[var(--muted)]">
+            Terapeutická metoda JIH® a logo JIH® jsou chráněny ochrannou známkou.
           </p>
         </div>
       </div>

@@ -21,6 +21,28 @@ export default function ONas() {
         </div>
 
         <div>
+          <h2 className="font-heading text-2xl font-semibold mb-4">Fakta a ochranná známka</h2>
+          <ul className="space-y-3 text-[var(--muted)] leading-relaxed">
+            <li>
+              <span className="text-[var(--gold)]">—</span> Metoda byla pojmenována v roce 2015.
+              Název <strong>JIH</strong> znamená <em>Jasné Informace Hned</em> — vnímáním emocí.
+            </li>
+            <li>
+              <span className="text-[var(--gold)]">—</span> V prvních deseti letech ji spoluvytvářela
+              Hana Mokrá; od roku 2021 metodu dále rozvíjí Jarka Matušková.
+            </li>
+            <li>
+              <span className="text-[var(--gold)]">—</span> Od roku 2015 byla schopnost pracovat
+              s metodou profesionálně předána více než sedmdesáti lidem.
+            </li>
+            <li>
+              <span className="text-[var(--gold)]">—</span> Označení <strong>Terapeutická metoda
+              JIH®</strong> i <strong>logo JIH®</strong> jsou chráněny ochrannou známkou.
+            </li>
+          </ul>
+        </div>
+
+        <div>
           <h2 className="font-heading text-2xl font-semibold mb-4">Kdo za metodou stojí</h2>
           <ul className="space-y-4">
             <li>
