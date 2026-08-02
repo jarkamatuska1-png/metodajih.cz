@@ -12,6 +12,35 @@ export type Kurz = {
 // ponechány v původní podobě — doladí se v dalším kroku.
 export const kurzy: Kurz[] = [
   {
+    slug: "sam-sobe-terapeutem",
+    title: "Sám sobě terapeutem",
+    tagline:
+      "Osvoboďte se ze zajetí rozumu a ega a zbavte se tíhy života. Naučíme vás základní principy metody JIH® a to, jak je zařadit do svého každodenního života.",
+    perex: [
+      "Roční obsáhlý kurz osobního rozvoje metodou JIH® má stejnou hloubku jako kurz pro budoucí terapeuty, pouze bez terapeutického zaměření.",
+    ],
+    naucite: {
+      heading: "Co se v kurzu naučíte?",
+      items: [
+        "Naučíme se vnímat a cítit energie (emoce, pocity, postoje, iluze i dogmata) i to, jak se vrátit do své vlastní energie a přestat odžívat to, co není vaše.",
+        "Poznáte do hloubky sami sebe i souvislosti života, opustíte staré návyky a stanete se odolnějším vůči všemu, co život přináší.",
+        "Získáváte obrovský potenciál díky obnově své energie a opravdového zapojení intuice, vnímání Boha v sobě, do svého života.",
+      ],
+    },
+    soucasti: {
+      heading: "Co je součástí kurzu?",
+      items: [
+        "4× čtyřdenní setkání naživo",
+        "4× jednodenní online workshopy",
+        "4× individuální konzultace",
+        "závěrečné jednodenní setkání",
+        "Škola channelingu — osmitýdenní kurz stahování informací ze zdroje",
+        "uzavřené prostředí pro komunikaci po celou dobu kurzu",
+      ],
+    },
+    cena: "Cena kurzu je 124 800 Kč s možností platby v předem dohodnutých splátkách.",
+  },
+  {
     slug: "skola-zivota",
     title: "Škola života",
     tagline: "Objevte sebe a naučte se používat svou intuici v každodenním životě",
@@ -146,35 +175,6 @@ export const kurzy: Kurz[] = [
       ],
     },
     cena: "Cena za každou část kurzu je 19 990 Kč. Kurz probíhá ve dvou čtyřtýdenních blocích s pauzou 14 dní mezi oběma částmi. Platbu je možno uhradit v jedné, dvou nebo deseti platbách po sobě jdoucích.",
-  },
-  {
-    slug: "sam-sobe-terapeutem",
-    title: "Sám sobě terapeutem",
-    tagline:
-      "Osvoboďte se ze zajetí rozumu a ega a zbavte se tíhy života. Naučíme vás základní principy metody JIH® a to, jak je zařadit do svého každodenního života.",
-    perex: [
-      "Roční obsáhlý kurz osobního rozvoje metodou JIH® má stejnou hloubku jako kurz pro budoucí terapeuty, pouze bez terapeutického zaměření.",
-    ],
-    naucite: {
-      heading: "Co se v kurzu naučíte?",
-      items: [
-        "Naučíme se vnímat a cítit energie (emoce, pocity, postoje, iluze i dogmata) i to, jak se vrátit do své vlastní energie a přestat odžívat to, co není vaše.",
-        "Poznáte do hloubky sami sebe i souvislosti života, opustíte staré návyky a stanete se odolnějším vůči všemu, co život přináší.",
-        "Získáváte obrovský potenciál díky obnově své energie a opravdového zapojení intuice, vnímání Boha v sobě, do svého života.",
-      ],
-    },
-    soucasti: {
-      heading: "Co je součástí kurzu?",
-      items: [
-        "4× čtyřdenní setkání naživo",
-        "4× jednodenní online workshopy",
-        "4× individuální konzultace",
-        "závěrečné jednodenní setkání",
-        "Škola channelingu — osmitýdenní kurz stahování informací ze zdroje",
-        "uzavřené prostředí pro komunikaci po celou dobu kurzu",
-      ],
-    },
-    cena: "Cena kurzu je 124 800 Kč s možností platby v předem dohodnutých splátkách.",
   },
 ];
 
