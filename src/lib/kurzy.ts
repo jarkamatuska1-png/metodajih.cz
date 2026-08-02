@@ -185,3 +185,19 @@ export function getAllKurzy(): Kurz[] {
 export function getKurzBySlug(slug: string): Kurz | undefined {
   return kurzy.find((k) => k.slug === slug);
 }
+
+// Bannery přenesené ze staré stránky (jen skola-zivota je .jpg, ostatní .png).
+const bannery: Record<string, string> = {
+  "sam-sobe-terapeutem": "sam-sobe-terapeutem.png",
+  "skola-zivota": "skola-zivota.jpg",
+  "skola-zivota-pro-deti": "skola-zivota-pro-deti.png",
+  "andelske-uceni": "andelske-uceni.png",
+  "automaticka-kresba-diagnosticka": "automaticka-kresba-diagnosticka.png",
+  "vedome-tvoreni-vlastni-reality": "vedome-tvoreni-vlastni-reality.png",
+  "cviceni-cpt-m": "cviceni-cpt-m.png",
+  "skola-channelingu": "skola-channelingu.png",
+};
+
+export function getBanner(slug: string): string | undefined {
+  return bannery[slug] ? `/images/kurzy/${bannery[slug]}` : undefined;
+}

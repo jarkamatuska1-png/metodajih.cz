@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
-import { getAllKurzy } from "@/lib/kurzy";
+import { getAllKurzy, getBanner } from "@/lib/kurzy";
 
 export const metadata: Metadata = { title: "Kurzy" };
 
@@ -32,20 +32,34 @@ export default function Kurzy() {
 
       {/* Ostatní kurzy */}
       <div className="grid sm:grid-cols-2 gap-6">
-        {kurzy.map((k) => (
-          <Link
-            key={k.slug}
-            href={`/kurzy/${k.slug}`}
-            className="block border border-[var(--gold-light)] rounded-xl p-6 hover:border-[var(--gold)] transition-colors group"
-          >
-            <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-[var(--gold-dark)] transition-colors">
-              {k.title}
-            </h3>
-            <p className="text-sm text-[var(--muted)] leading-relaxed line-clamp-3">
-              {k.tagline}
-            </p>
-          </Link>
-        ))}
+        {kurzy.map((k) => {
+          const foto = getBanner(k.slug);
+          return (
+            <Link
+              key={k.slug}
+              href={`/kurzy/${k.slug}`}
+              className="block border border-[var(--gold-light)] rounded-xl overflow-hidden hover:border-[var(--gold)] transition-colors group"
+            >
+              {foto && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={foto}
+                  alt={k.title}
+                  loading="lazy"
+                  className="w-full h-40 object-cover"
+                />
+              )}
+              <div className="p-6">
+                <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-[var(--gold-dark)] transition-colors">
+                  {k.title}
+                </h3>
+                <p className="text-sm text-[var(--muted)] leading-relaxed line-clamp-3">
+                  {k.tagline}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </PageShell>
   );

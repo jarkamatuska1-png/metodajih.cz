@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { getAllKurzy, getKurzBySlug } from "@/lib/kurzy";
+import { getAllKurzy, getKurzBySlug, getBanner } from "@/lib/kurzy";
 
 export function generateStaticParams() {
   return getAllKurzy().map((k) => ({ slug: k.slug }));
@@ -28,6 +28,7 @@ export default async function KurzDetail({
   const { slug } = await params;
   const kurz = getKurzBySlug(slug);
   if (!kurz) notFound();
+  const banner = getBanner(slug);
 
   return (
     <>
@@ -48,6 +49,17 @@ export default async function KurzDetail({
             </p>
           </div>
         </section>
+
+        {banner && (
+          <div className="max-w-3xl mx-auto px-6 -mt-8 mb-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={banner}
+              alt={kurz.title}
+              className="w-full rounded-xl border border-[var(--gold-light)] shadow-sm"
+            />
+          </div>
+        )}
 
         {/* Perex */}
         <section className="py-16 px-6">
