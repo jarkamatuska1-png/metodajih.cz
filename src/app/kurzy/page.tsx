@@ -3,7 +3,12 @@ import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import { getAllKurzy, getBanner } from "@/lib/kurzy";
 
-export const metadata: Metadata = { title: "Kurzy" };
+export const metadata: Metadata = {
+  title: "Kurzy",
+  description:
+    "Kurzy metody JIH® — od úvodu do metody přes Školu života a Automatickou kresbu diagnostickou až po roční kurz pro budoucí specialisty.",
+  alternates: { canonical: "/kurzy" },
+};
 
 export default function Kurzy() {
   const kurzy = getAllKurzy();
@@ -11,22 +16,22 @@ export default function Kurzy() {
   return (
     <PageShell
       title="Kurzy metody JIH®"
-      lead="Vzdělávací programy metody JIH® — od úvodu do metody až po přípravu průvodců a specialistů."
+      lead="Vzdělávací programy metody JIH® — od úvodu do metody až po přípravu specialistů."
     >
       {/* Roční kurz — flagship */}
       <Link
-        href="/stan-se-pruvodcem"
+        href="/stan-se-specialistou"
         className="block border-2 border-[var(--gold)] rounded-xl p-8 hover:bg-[var(--cream)] transition-colors group mb-12"
       >
         <p className="text-[11px] tracking-[0.25em] uppercase text-[var(--gold-dark)] mb-3">
           Roční online kurz · TOP kurz
         </p>
         <h2 className="font-heading text-2xl font-semibold mb-3">
-          Staň se průvodcem metody JIH®
+          Staň se specialistou metody JIH®
         </h2>
         <p className="text-[var(--muted)] leading-relaxed">
-          Deset měsíců vedené práce, po kterých rozumíš metodě v praxi a získáš certifikát
-          Průvodce metodou JIH® (dříve „Škola pro terapeuty“).
+          Deset měsíců vedené práce, po kterých rozumíš metodě v praxi a získáš interní
+          certifikaci Specialista metody JIH® (dříve „Škola pro terapeuty“).
         </p>
       </Link>
 

@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const footerLinks = [
   { href: "/kurzy", label: "Kurzy" },
-  { href: "/najit-pruvodce", label: "Najít průvodce" },
+  { href: "/najit-specialistu", label: "Najít specialistu" },
+  { href: "/stan-se-specialistou", label: "Stát se specialistou" },
   { href: "/o-nas", label: "O nás" },
   { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
@@ -16,7 +17,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo-jih.png" alt="Metoda JIH®" className="h-14 w-auto" />
+          <img src="/images/logo-jih.png" alt="Metoda JIH®" width={361} height={346} className="h-14 w-auto" />
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs tracking-[0.2em] uppercase">
             {footerLinks.map((l) => (
               <Link
@@ -39,6 +40,12 @@ export default function Footer() {
               +420 774 420 251
             </a>
           </div>
+          <p className="text-center">
+            Autorka metody píše o životě s metodou na{" "}
+            <a href="https://jarkamatuskova.cz/" className="text-[var(--gold-dark)] underline underline-offset-2 hover:text-[var(--gold)] transition-colors">
+              jarkamatuskova.cz
+            </a>
+          </p>
           <p className="text-center">
             © {new Date().getFullYear()} freli s.r.o. · Autorská metoda Jarky Matuškové.
             Všechna práva vyhrazena.

@@ -17,7 +17,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const kurz = getKurzBySlug(slug);
   if (!kurz) return { title: "Kurz nenalezen" };
-  return { title: kurz.title, description: kurz.tagline };
+  const banner = getBanner(slug);
+  return {
+    title: kurz.title,
+    description: kurz.tagline,
+    alternates: { canonical: `/kurzy/${slug}` },
+    openGraph: {
+      title: `${kurz.title} | Metoda JIH®`,
+      description: kurz.tagline,
+      url: `/kurzy/${slug}`,
+      ...(banner ? { images: [{ url: banner, alt: kurz.title }] } : {}),
+    },
+  };
 }
 
 export default async function KurzDetail({
@@ -29,9 +40,28 @@ export default async function KurzDetail({
   const kurz = getKurzBySlug(slug);
   if (!kurz) notFound();
   const banner = getBanner(slug);
+  // Strukturovaná data kurzu pro vyhledávače (schema.org/Course).
+  const kurzData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: kurz.title,
+    description: kurz.tagline,
+    url: `https://www.metodajih.cz/kurzy/${slug}`,
+    inLanguage: "cs",
+    provider: {
+      "@type": "Organization",
+      name: "Metoda JIH®",
+      url: "https://www.metodajih.cz",
+    },
+    ...(banner ? { image: `https://www.metodajih.cz${banner}` } : {}),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(kurzData) }}
+      />
       <Nav />
 
       <main className="flex-1">

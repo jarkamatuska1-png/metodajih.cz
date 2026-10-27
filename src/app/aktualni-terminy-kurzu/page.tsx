@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
-export const metadata: Metadata = { title: "Aktuální termíny kurzů" };
+export const metadata: Metadata = {
+  title: "Aktuální termíny kurzů",
+  description:
+    "Přehled vypsaných i stálých on-line kurzů metody JIH® — Automatická kresba diagnostická, Škola života, Andělské učení a další.",
+  alternates: { canonical: "/aktualni-terminy-kurzu" },
+};
 
 type Termin = { text: string; url?: string };
 type Sekce = { title: string; label?: string; items: Termin[] };
@@ -12,7 +17,7 @@ const sekce: Sekce[] = [
     label: "On-line kurz",
     items: [
       { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky v rámci členské sekce Nikoly Usvaldové", url: "https://nikolausvaldova.cz/automaticka-kresba-diagnosticka" },
-      { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky s Bárou Maxovou", url: "https://www.baramaxova.cz/" },
+      { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky s Bárou Benešovou", url: "https://www.baramaxova.cz/" },
       { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky s Jarkou Matuškovou", url: "https://jarkamatuskova.cz/projekty/automaticka-kresba/" },
     ],
   },
@@ -34,8 +39,8 @@ const sekce: Sekce[] = [
     title: "Další kurzy metodou JIH®",
     label: "On-line i živé kurzy a přednášky",
     items: [
-      { text: "Sám sobě terapeutem — online kurz s navazující možností získat certifikát terapeuta metodou JIH, kurzem provází Bára Benešová Maxová a Hanka Mokrá, úvodní hodina 18. 3. 2026", url: "https://www.baramaxova.cz/sam-sobe-terapeutem" },
-      { text: "Najdi svoji životní cestu — cyklus 10 živých workshopů s Majou Vodvářkovou v Litoměřicích, od 23. 4. 2026 do 27. 8. 2026 každé dva týdny, vždy od 17.00 do 19.00 hodin", url: "https://moje.flixy.cz/maja2/p/najdi-svoji-ivotn-cestu-6hjddkccg" },
+      { text: "Sám sobě terapeutem — online kurz s navazující možností získat interní certifikaci Specialista metody JIH®, kurzem provází Bára Benešová a Hanka Mokrá; termín dalšího běhu najdete na webu kurzu", url: "https://www.baramaxova.cz/sam-sobe-terapeutem" },
+      { text: "Najdi svoji životní cestu — cyklus 10 živých workshopů s Majou Vodvářkovou v Litoměřicích; termín dalšího běhu najdete na webu kurzu", url: "https://moje.flixy.cz/maja2/p/najdi-svoji-ivotn-cestu-6hjddkccg" },
     ],
   },
   {

@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
-export const metadata: Metadata = { title: "Časté dotazy" };
+export const metadata: Metadata = {
+  title: "Časté dotazy",
+  description:
+    "Jak probíhá terapie metodou JIH®, kolik stojí, kde se konají setkání a co znamenají označení Specialista, Senior specialista a Garant metody JIH®.",
+  alternates: { canonical: "/faq" },
+};
 
 const faq = [
   {
@@ -10,11 +15,11 @@ const faq = [
   },
   {
     q: "Musím se na terapii nějak připravit?",
-    a: "Není třeba. Stačí odhodlání ke změně, vše ostatní už bude na spolupráci s průvodcem.",
+    a: "Není třeba. Stačí odhodlání ke změně, vše ostatní už bude na spolupráci se specialistou.",
   },
   {
     q: "Kde terapie probíhají?",
-    a: "Naši průvodci jsou z různých koutů republiky. Každý z nich nabízí i terapie online nebo telefonicky, volba je jen na vás.",
+    a: "Naši specialisté jsou z různých koutů republiky. Každý z nich nabízí i terapie online nebo telefonicky, volba je jen na vás.",
   },
   {
     q: "Kolik terapií je zapotřebí a jak často?",
@@ -22,15 +27,23 @@ const faq = [
   },
   {
     q: "Kolik stojí terapie nebo konzultace metodou JIH®?",
-    a: "Každý z průvodců má možnost mít svůj vlastní ceník. Minimální cena terapie je 2 000 Kč, konzultace pak 1 000 Kč.",
+    a: "Každý specialista má možnost mít svůj vlastní ceník. Minimální cena terapie je 2 000 Kč, konzultace pak 1 000 Kč.",
   },
   {
     q: "Je terapie nepříjemná, bolestivá?",
-    a: "Při terapii odvádí hlavní práci průvodce. Vše je nastaveno tak, aby cokoliv, co je zpracováváno, klient vnímal v maximální lehkosti. Pracujeme bez nutnosti regrese a znovuprožívání traumat.",
+    a: "Při terapii odvádí hlavní práci specialista. Vše je nastaveno tak, aby cokoliv, co je zpracováváno, klient vnímal v maximální lehkosti. Pracujeme bez nutnosti regrese a znovuprožívání traumat.",
   },
   {
     q: "Mohu si být jistý diskrétností?",
-    a: "Každý průvodce je vázán etickým kodexem metody JIH®. Informace, které jsou předávány během terapie, nikdy nesdílíme s třetí stranou.",
+    a: "Každý specialista je vázán Etickým kodexem metody JIH®. Informace, které jsou předávány během terapie, nikdy nesdílíme s třetí stranou.",
+  },
+  {
+    q: "Co znamená Specialista, Senior specialista a Garant metody JIH®?",
+    a: "Jsou to interní kvalifikační stupně, které uděluje autorka metody. Specialista metody JIH® absolvoval vzdělávací program a získal interní certifikaci. Senior specialista prošel rozšířeným vzděláváním a praxí. Garant metody JIH® je nejvyšší interní úroveň a odpovídá za celistvost metody a vzdělávání dalších specialistů. Od 1. 8. 2026 tato označení nahrazují dřívější „Terapeut“ a „Terapeut profesionál“.",
+  },
+  {
+    q: "Nahradí terapie metodou JIH® lékaře nebo psychologa?",
+    a: "Ne. Metoda JIH® je autorský vzdělávací a seberozvojový přístup. Není zdravotní službou, psychologickým poradenstvím ani psychoterapií a interní certifikace JIH® není státem uznaná odborná kvalifikace. Specialista nestanovuje diagnózu, neléčí a neslibuje léčebný výsledek. Když potřebujete lékaře, psychologa nebo psychoterapeuta, metoda JIH® jejich péči nenahrazuje, může ji jen doprovázet.",
   },
 ];
 

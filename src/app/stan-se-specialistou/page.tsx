@@ -4,9 +4,10 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Staň se průvodcem metody JIH®",
+  title: "Staň se specialistou metody JIH®",
   description:
-    "Roční online kurz metody JIH® — 10 měsíců vedené práce, po jejímž absolvování získáš certifikát Průvodce metodou JIH®.",
+    "Roční online kurz metody JIH® — 10 měsíců vedené práce, po jejímž absolvování získáš interní certifikaci Specialista metody JIH®.",
+  alternates: { canonical: "/stan-se-specialistou" },
 };
 
 const seNaucis = [
@@ -42,11 +43,11 @@ const prubeh = [
 ];
 
 const ziskas = [
-  "Certifikát Průvodce metodou JIH®",
+  "Interní certifikaci Specialista metody JIH®",
   "Zázemí a profil na webu metody JIH®",
   "Propagaci tvých aktivit na webu metody",
   "Skupinu s podporou autorky a přednost konzultací",
-  "Možnost vyučovat kurzy autorky (na základě licence)",
+  "Možnost získat oprávnění Lektor metody JIH® a vést kurzy autorky (na základě licence)",
   "Sebedůvěru a schopnost pomáhat sobě i ostatním",
 ];
 
@@ -59,17 +60,17 @@ const ceny = [
 const reference = [
   {
     name: "Klára Mrazíková",
-    role: "Specialista metody JIH®",
+    role: "Senior specialistka metody JIH®",
     text: "Prvních pár měsíců bylo plných aha momentů o těle a jeho moudrosti. Druhá část o mysli byla intenzivnější — ale práce s klienty, když vidíš jejich obnovu, za to stojí.",
   },
   {
     name: "Šárka Bohuslavová",
-    role: "Specialista metody JIH®",
+    role: "Specialistka metody JIH®",
     text: "Nebyla to klasická výuka. Bylo to zaměřené na individualitu a vnímání. Postupem času se „nevím, ale musím“ změnilo na „mám záměr“.",
   },
 ];
 
-export default function StanSePruvodcem() {
+export default function StanSeSpecialistou() {
   return (
     <>
       <Nav />
@@ -82,7 +83,7 @@ export default function StanSePruvodcem() {
               Roční online kurz · 10 měsíců
             </p>
             <h1 className="font-heading text-4xl md:text-6xl font-semibold leading-tight mb-8">
-              Staň se průvodcem metody JIH<span className="align-super text-[0.5em]">®</span>
+              Staň se specialistou metody JIH<span className="align-super text-[0.5em]">®</span>
             </h1>
             <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto leading-relaxed mb-10">
               Deset měsíců vedené práce, po kterých rozumíš metodě JIH® v praxi a umíš ji předat dál.

@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
-export const metadata: Metadata = { title: "Kontakt" };
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description:
+    "Kontakt na autorku metody JIH® Jarku Matuškovou — telefon a e-mail pro dotazy ke kurzům a metodě.",
+  alternates: { canonical: "/kontakt" },
+};
 
 export default function Kontakt() {
   return (

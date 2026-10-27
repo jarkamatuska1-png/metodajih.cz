@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
-export const metadata: Metadata = { title: "O nás" };
+export const metadata: Metadata = {
+  title: "O nás",
+  description:
+    "Kdo stojí za metodou JIH®: autorka Jarka Matušková, historie metody od roku 2015, ochranná známka a fakta.",
+  alternates: { canonical: "/o-nas" },
+};
 
 export default function ONas() {
   return (

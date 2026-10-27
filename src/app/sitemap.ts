@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
 import { getAllKurzy } from "@/lib/kurzy";
 
-const BASE = "https://metodajih.cz";
+const BASE = "https://www.metodajih.cz";
 
 const routes = [
   "",
   "/kurzy",
-  "/stan-se-pruvodcem",
+  "/stan-se-specialistou",
   "/produkty",
   "/aktualni-terminy-kurzu",
-  "/najit-pruvodce",
+  "/najit-specialistu",
   "/o-nas",
   "/kontakt",
   "/faq",

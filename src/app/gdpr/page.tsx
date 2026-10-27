@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
-export const metadata: Metadata = { title: "Ochrana osobních údajů" };
+export const metadata: Metadata = {
+  title: "Ochrana osobních údajů",
+  description:
+    "Jak web metodajih.cz chrání osobní údaje zákazníků, účastníků kurzů a návštěvníků a jaká máte práva podle GDPR.",
+  alternates: { canonical: "/gdpr" },
+};
 
 export default function Gdpr() {
   return (
