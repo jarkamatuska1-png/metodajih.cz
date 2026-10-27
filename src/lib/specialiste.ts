@@ -1,5 +1,7 @@
-// Data přenesena 1:1 ze staré stránky „Najít terapeuta". Terminologie
-// („terapeut") ponechána v původní podobě — přejmenuje se po setkání terapeutů.
+// Data přenesena ze staré stránky „Najít terapeuta". Označení rolí převedena
+// podle Etického kodexu metody JIH® 2026.2 (čl. 25–27): Terapeut → Specialista,
+// Terapeut profesionál → Senior specialista. Lektorství je funkční oprávnění,
+// potvrzuje se u konkrétní osoby — proto není v názvech sekcí.
 
 export type Kontakt = {
   tel?: string;
@@ -9,7 +11,7 @@ export type Kontakt = {
   pdf?: string;
 };
 
-export type Terapeut = {
+export type Specialista = {
   name: string;
   photo: string;
   role?: string;
@@ -20,14 +22,14 @@ export type Terapeut = {
 export type Sekce = {
   title: string;
   podtitul?: string;
-  lide: Terapeut[];
+  lide: Specialista[];
 };
 
 export const uvod = {
-  h1: "Terapie a koučink metodou JIH®",
+  h1: "Najít specialistu metody JIH®",
   odstavce: [
     "Vyberte si podle svých sympatií nebo podle místa působiště. Domluvte si termín a preferovaný způsob komunikace.",
-    "On-line přes Zoom, WhatsApp či Messenger, telefonicky nebo osobně v místě působiště terapeuta.",
+    "On-line přes Zoom, WhatsApp či Messenger, telefonicky nebo osobně v místě působiště specialisty.",
   ],
 };
 
@@ -44,8 +46,8 @@ export const sekce: Sekce[] = [
     ],
   },
   {
-    title: "Certifikovaní terapeuti a lektoři metodou JIH®",
-    podtitul: "Terapeuti pro terapie úrovně 1, 2, 3",
+    title: "Certifikovaní specialisté metody JIH®",
+    podtitul: "Pro terapie úrovně 1, 2, 3",
     lide: [
       {
         name: "Ing. Jana Chyňava Urbanová",
@@ -62,7 +64,7 @@ export const sekce: Sekce[] = [
       {
         name: "Ing. Simona Vrabcová",
         photo: "/images/terapeuti/simona-vrabcova.jpg",
-        role: "Terapeut profesionál",
+        role: "Senior specialista metody JIH®",
         misto: "Děčín",
         kontakt: { tel: "777 096 100", email: "vrabcova.simona@seznam.cz", web: "https://vrabcovasimona.cz/", video: "https://www.youtube.com/watch?v=YuucpVAJDzU" },
       },
@@ -105,7 +107,7 @@ export const sekce: Sekce[] = [
       {
         name: "Veronika Coufalová",
         photo: "/images/terapeuti/veronika-coufalova.jpg",
-        role: "Terapeut metody JIH a stylistka",
+        role: "Specialista metody JIH® a stylistka",
         kontakt: { web: "https://plussizelife.cz/", video: "https://youtu.be/liXrmBtW6G4" },
       },
       {
@@ -147,7 +149,7 @@ export const sekce: Sekce[] = [
     ],
   },
   {
-    title: "Terapeuti pro terapie úrovně 1, 3",
+    title: "Specialisté pro terapie úrovně 1, 3",
     lide: [
       {
         name: "Lucka Kouparová",
@@ -180,7 +182,7 @@ export const sekce: Sekce[] = [
       {
         name: "Bc. Martina Zelenická",
         photo: "/images/terapeuti/martina-zelenicka.jpg",
-        role: "Terapeut profesionál",
+        role: "Senior specialista metody JIH®",
         kontakt: { web: "https://www.martinazelenicka.cz/", video: "https://youtu.be/YweZjiM1EN0" },
       },
       {
@@ -224,7 +226,7 @@ export const sekce: Sekce[] = [
       {
         name: "Ing. Klára Mrazíková",
         photo: "/images/terapeuti/klara-mrazikova.jpg",
-        role: "Terapeut profesionál",
+        role: "Senior specialista metody JIH®",
         misto: "Praha",
         kontakt: { tel: "728 470 089", email: "info@klaramrazikova.cz", web: "https://klaramrazikova.cz/", video: "https://www.youtube.com/watch?v=4gzR23Uf4Q8" },
       },

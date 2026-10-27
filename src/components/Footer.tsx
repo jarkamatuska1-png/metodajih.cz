@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const footerLinks = [
   { href: "/kurzy", label: "Kurzy" },
-  { href: "/najit-pruvodce", label: "Najít průvodce" },
+  { href: "/najit-specialistu", label: "Najít specialistu" },
+  { href: "/stan-se-specialistou", label: "Stát se specialistou" },
   { href: "/o-nas", label: "O nás" },
   { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
@@ -39,6 +40,12 @@ export default function Footer() {
               +420 774 420 251
             </a>
           </div>
+          <p className="text-center">
+            Autorka metody píše o životě s metodou na{" "}
+            <a href="https://jarkamatuskova.cz/" className="text-[var(--gold-dark)] hover:text-[var(--gold)] transition-colors">
+              jarkamatuskova.cz
+            </a>
+          </p>
           <p className="text-center">
             © {new Date().getFullYear()} freli s.r.o. · Autorská metoda Jarky Matuškové.
             Všechna práva vyhrazena.

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://metodajih.cz/sitemap.xml",
+    sitemap: "https://www.metodajih.cz/sitemap.xml",
   };
 }

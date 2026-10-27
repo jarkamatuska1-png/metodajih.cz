@@ -17,7 +17,7 @@ export const kurzy: Kurz[] = [
     tagline:
       "Osvoboďte se ze zajetí rozumu a ega a zbavte se tíhy života. Naučíme vás základní principy metody JIH® a to, jak je zařadit do svého každodenního života.",
     perex: [
-      "Roční obsáhlý kurz osobního rozvoje metodou JIH® má stejnou hloubku jako kurz pro budoucí terapeuty, pouze bez terapeutického zaměření.",
+      "Roční obsáhlý kurz osobního rozvoje metodou JIH® má stejnou hloubku jako kurz pro budoucí specialisty, pouze bez terapeutického zaměření.",
     ],
     naucite: {
       heading: "Co se v kurzu naučíte?",

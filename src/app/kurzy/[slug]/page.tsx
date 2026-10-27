@@ -17,7 +17,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const kurz = getKurzBySlug(slug);
   if (!kurz) return { title: "Kurz nenalezen" };
-  return { title: kurz.title, description: kurz.tagline };
+  const banner = getBanner(slug);
+  return {
+    title: kurz.title,
+    description: kurz.tagline,
+    alternates: { canonical: `/kurzy/${slug}` },
+    openGraph: {
+      title: `${kurz.title} | Metoda JIH®`,
+      description: kurz.tagline,
+      url: `/kurzy/${slug}`,
+      ...(banner ? { images: [{ url: banner, alt: kurz.title }] } : {}),
+    },
+  };
 }
 
 export default async function KurzDetail({

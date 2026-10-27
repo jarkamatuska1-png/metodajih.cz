@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { uvod, sekce, type Terapeut } from "@/lib/terapeuti";
+import { uvod, sekce, type Specialista } from "@/lib/specialiste";
 
 export const metadata: Metadata = {
-  title: "Najít průvodce",
-  description: "Terapie a koučink metodou JIH® — vyberte si terapeuta podle sympatií nebo místa působiště.",
+  title: "Najít specialistu",
+  description:
+    "Seznam certifikovaných specialistů metody JIH® z celé republiky. Vyberte si podle sympatií nebo místa působiště, osobně i online.",
+  alternates: { canonical: "/najit-specialistu" },
 };
 
-function Kontakty({ t }: { t: Terapeut }) {
+function Kontakty({ t }: { t: Specialista }) {
   const k = t.kontakt;
   const cls =
     "text-[13px] text-[var(--gold-dark)] hover:text-[var(--gold)] transition-colors";
@@ -23,7 +25,7 @@ function Kontakty({ t }: { t: Terapeut }) {
   );
 }
 
-function Karta({ t }: { t: Terapeut }) {
+function Karta({ t }: { t: Specialista }) {
   return (
     <div className="text-center">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -41,7 +43,7 @@ function Karta({ t }: { t: Terapeut }) {
   );
 }
 
-export default function NajitPruvodce() {
+export default function NajitSpecialistu() {
   return (
     <>
       <Nav />

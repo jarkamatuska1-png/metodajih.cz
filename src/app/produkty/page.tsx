@@ -5,7 +5,8 @@ import { produkty } from "@/lib/produkty";
 
 export const metadata: Metadata = {
   title: "Produkty",
-  description: "Ruční díla našich terapeutů nesou energii metody JIH® — pro prosperitu, zdraví, vztahy i vaše záměry.",
+  description: "Ruční díla našich specialistů nesou energii metody JIH® — pro prosperitu, zdraví, vztahy i vaše záměry.",
+  alternates: { canonical: "/produkty" },
 };
 
 export default function Produkty() {
@@ -16,7 +17,7 @@ export default function Produkty() {
         <section className="bg-[var(--cream)] pt-40 pb-16 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-3xl md:text-5xl font-semibold leading-tight mb-6">
-              Prohlédněte si výrobky našich terapeutů
+              Prohlédněte si výrobky našich specialistů
             </h1>
             <p className="text-[var(--muted)] leading-relaxed">
               Všechna díla nesou energii metody JIH®, která podporuje prosperitu vašeho života,

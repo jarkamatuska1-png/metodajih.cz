@@ -8,7 +8,7 @@ const links = [
   { href: "/kurzy", label: "Kurzy" },
   { href: "/produkty", label: "Produkty" },
   { href: "/aktualni-terminy-kurzu", label: "Aktuálně" },
-  { href: "/najit-pruvodce", label: "Najít průvodce" },
+  { href: "/najit-specialistu", label: "Najít specialistu" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 

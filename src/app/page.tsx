@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -12,17 +13,36 @@ const claimy = [
 const urovne = [
   {
     title: "Úroveň 1",
-    text: "Je určena všem klientům, kteří přichází na terapii poprvé nebo opakovaně. Z pozice kouče/terapeuta se stáváme neutrální k tomu, co vnímáme a cítíme ve své energii od okamžiku, kdy se rozhodneme cítit a vnímat energii klienta. K tomu je potřeba jeho svolení, a to je splněno jeho žádostí o setkání. Úkolem terapeuta je najít zdroj – začátek nepohodlného stavu, který může mít svůj začátek i v minulých životech. Jakmile je zdroj pochopen v neutrálním vnímání duše klienta, zaznamenává se úleva – a tím pádem není důvod k opakování situace. Skrze energii klienta je rovnána energie všech jeho vztahů, vždy pro nejvyšší dobro všech vazeb.",
+    text: "Je určena všem klientům, kteří přichází na terapii poprvé nebo opakovaně. Z pozice specialisty se stáváme neutrální k tomu, co vnímáme a cítíme ve své energii od okamžiku, kdy se rozhodneme cítit a vnímat energii klienta. K tomu je potřeba jeho svolení, a to je splněno jeho žádostí o setkání. Úkolem specialisty je najít zdroj – začátek nepohodlného stavu, který může mít svůj začátek i v minulých životech. Jakmile je zdroj pochopen v neutrálním vnímání duše klienta, zaznamenává se úleva – a tím pádem není důvod k opakování situace. Skrze energii klienta je rovnána energie všech jeho vztahů, vždy pro nejvyšší dobro všech vazeb.",
   },
   {
     title: "Úroveň 2",
-    text: "Je určena všem klientům, kteří již mají zkušenosti, umí pracovat se svou vlastní energií a vnímat sebe sama. Při terapii jsou vedeni koučem/terapeutem do stavu napojení na své vyšší Já, na své vědomí i nevědomí. Díky tomu jsou zpřístupněny i ty oblasti, které by se jinak při terapii neodkryly. Klient je veden tak, aby dokázal zodpovědět otázky směřující k prvopočátku omezení a bloků ve své energii, a to v celé linii času – bez potřeby prožívat regresí nepříjemné zážitky znovu.",
+    text: "Je určena všem klientům, kteří již mají zkušenosti, umí pracovat se svou vlastní energií a vnímat sebe sama. Při terapii jsou vedeni specialistou do stavu napojení na své vyšší Já, na své vědomí i nevědomí. Díky tomu jsou zpřístupněny i ty oblasti, které by se jinak při terapii neodkryly. Klient je veden tak, aby dokázal zodpovědět otázky směřující k prvopočátku omezení a bloků ve své energii, a to v celé linii času – bez potřeby prožívat regresí nepříjemné zážitky znovu.",
   },
   {
     title: "Úroveň 3",
     text: "Je určena všem klientům. Obdobně jako v úrovni 2 je klient veden do napojení na sebe sama a své nevědomí tak, aby se bez znovuprožívání starých a bolestivých zkušeností dostal ke zdroji nepohodlí. Narozdíl od úrovně 2 se pohybujeme jen v časové ose tohoto života. Je to proto, aby se každý z klientů učil pracovat na sobě a svém životě vědomě a účinně. Úroveň 3 je obvykle součástí terapie 1 i 2.",
   },
 ];
+
+const stupne = [
+  {
+    title: "Specialista metody JIH®",
+    text: "Absolvoval vzdělávací program metody JIH® a získal interní certifikaci. Předává principy metody, klade otázky a pomáhá vám vnímat sebe sama — nevystupuje jako ten, kdo zná jedinou správnou pravdu o vašem životě.",
+  },
+  {
+    title: "Senior specialista metody JIH®",
+    text: "Vyšší interní úroveň. Prošel rozšířeným vzděláváním, má za sebou praxi a další rozvoj a pracuje s metodou ve větším rozsahu.",
+  },
+  {
+    title: "Garant metody JIH®",
+    text: "Nejvyšší interní úroveň, kterou uděluje autorka. Garant odpovídá za celistvost metody a za vzdělávání dalších specialistů.",
+  },
+];
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
@@ -45,10 +65,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/najit-pruvodce"
+                href="/najit-specialistu"
                 className="bg-[var(--gold)] text-white px-8 py-3 text-sm tracking-[0.15em] uppercase hover:bg-[var(--gold-dark)] transition-colors"
               >
-                Najít průvodce
+                Najít specialistu
               </Link>
               <Link
                 href="/kurzy"
@@ -94,16 +114,48 @@ export default function Home() {
               Požádejte o pomoc — nebuďte na život sami.
             </p>
             <Link
-              href="/najit-pruvodce"
+              href="/najit-specialistu"
               className="inline-block bg-[var(--gold)] text-white px-8 py-3 text-sm tracking-[0.15em] uppercase hover:bg-[var(--gold-dark)] transition-colors"
             >
-              Najít průvodce
+              Najít specialistu
             </Link>
           </div>
         </section>
 
-        {/* Tři úrovně terapie */}
+        {/* Kdo s vámi pracuje — stupně podle Etického kodexu 2026.2 */}
         <section className="py-24 px-6">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-[11px] tracking-[0.3em] uppercase text-[var(--gold-dark)] mb-4 text-center">
+              Etický kodex metody JIH® · platný od 1. 8. 2026
+            </p>
+            <h2 className="font-heading text-3xl font-semibold text-center mb-6">
+              Kdo s vámi metodou JIH® pracuje
+            </h2>
+            <p className="text-[var(--muted)] leading-relaxed max-w-2xl mx-auto text-center mb-12">
+              Každý, kdo na tomto webu nabízí práci metodou JIH®, prošel vzděláním u autorky metody
+              a je vázán jejím etickým kodexem. Označení jeho role vám řekne, jak daleko na své cestě
+              s metodou došel.
+            </p>
+            <div className="grid md:grid-cols-3 gap-10">
+              {stupne.map((s) => (
+                <div key={s.title}>
+                  <h3 className="font-heading text-lg font-semibold mb-3 text-[var(--gold-dark)]">
+                    {s.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{s.text}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-12 text-sm text-[var(--muted)] leading-relaxed max-w-2xl mx-auto text-center">
+              Metoda JIH® je autorský seberozvojový přístup. Není zdravotní službou, psychologickým
+              poradenstvím ani psychoterapií a interní certifikace JIH® není státem uznaná odborná
+              kvalifikace. Péči lékaře nebo psychologa nenahrazuje.
+            </p>
+          </div>
+        </section>
+
+        {/* Tři úrovně terapie */}
+        <section className="py-24 px-6 border-t border-[var(--cream-dark)]">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-heading text-3xl font-semibold text-center mb-12">
               Tři úrovně terapie metodou JIH®
@@ -158,11 +210,29 @@ export default function Home() {
               Lidé začali přicházet s prosbami o pomoc, a tak jsme se rozhodly předat vše, co známe
               a používáme, dál. Vznikl název JIH — Jasné Informace Hned vnímáním emocí, který
               získal ochrannou známku. Od roku 2015 jsme schopnost pracovat s metodou JIH®
-              profesionálně předaly více než sedmdesáti lidem."
+              profesionálně předaly více než sedmdesáti lidem.“
             </blockquote>
             <p className="text-[var(--muted)] leading-relaxed mt-6 text-center">
               V roce 2015 metoda JIH® získala svou ochrannou známku.
             </p>
+          </div>
+        </section>
+
+        {/* Most na Jarčin hlas */}
+        <section className="bg-[var(--cream)] py-20 px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[11px] tracking-[0.3em] uppercase text-[var(--gold-dark)] mb-6">
+              Od autorky metody
+            </p>
+            <blockquote className="font-heading text-2xl md:text-3xl leading-snug italic mb-8">
+              {"„Metodu JIH® jsem nevymyslela u stolu. Vznikla z toho, co jsem potřebovala sama — a pořád ji žiju každý den. O tom píšu na svém webu.“"}
+            </blockquote>
+            <a
+              href="https://jarkamatuskova.cz/"
+              className="inline-block border border-[var(--gold)] text-[var(--gold-dark)] px-8 py-3 text-sm tracking-[0.15em] uppercase hover:bg-[var(--gold)] hover:text-white transition-colors"
+            >
+              Jarka Matušková
+            </a>
           </div>
         </section>
       </main>

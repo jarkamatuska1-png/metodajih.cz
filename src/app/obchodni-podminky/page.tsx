@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
-export const metadata: Metadata = { title: "Obchodní podmínky" };
+export const metadata: Metadata = {
+  title: "Obchodní podmínky",
+  description:
+    "Obchodní podmínky pro kurzy a produkty metody JIH® provozované společností freli s.r.o.",
+  alternates: { canonical: "/obchodni-podminky" },
+};
 
 export default function ObchodniPodminky() {
   return (
