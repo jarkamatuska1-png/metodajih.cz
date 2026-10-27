@@ -36,6 +36,78 @@ const securityHeaders = [
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
 ];
 
+// Adresy článků ze starého WordPressu (větev static-archive), které nemají
+// na novém webu obdobu.
+const staryBlog = [
+  "andele-a-andelske-energie",
+  "andelky",
+  "barvy",
+  "bozi-babicka",
+  "bude-nebude-aneb-co-vam-kartarka-nerekla",
+  "cestovani-napric-zivoty",
+  "cibule-myslenek-diamant-duse",
+  "co-je-pro-me-metoda-j-i-h",
+  "co-je-rozum",
+  "dokonala-zena",
+  "druhy-breh",
+  "e-book-metoda-j-i-h",
+  "emoce",
+  "hodnoceni",
+  "ja-a-duch-svaty",
+  "jak-funguji-navyky",
+  "jak-si-spravne-prat",
+  "jak-si-spravne-prat-2",
+  "jak-to-vlastne-chci",
+  "je-moje-cesta-pro-me-ta-spravna",
+  "jiny-uhel-pohledu",
+  "jonas-velryba-a-my-2-cast",
+  "jonas-velryba-a-my-prvni-cast",
+  "kdo-je-buh",
+  "kdyz-vis",
+  "koucink-metoda-jih",
+  "laska",
+  "medicina",
+  "metoda-jih-vs-esoterie-vs-klasicka-medicina",
+  "mluvim-o-energiich",
+  "moc-nasich-myslenek",
+  "moj-zivot-je-len-o-mne",
+  "moje-cesta-k-bohu",
+  "moje-mama-byla-andel",
+  "moje-mila-maminka",
+  "mojecesta",
+  "muj-rok-2021",
+  "nalevate-si-cisteho-vina",
+  "nekonecno-ja",
+  "od-boha",
+  "osm-kroku-na-jih",
+  "pobidnout-zivot-do-cvalu",
+  "pohadka-o-popelce",
+  "pohadka-o-strachu-ktery-se-naucil-bat",
+  "pomoc-nebo-sluzba",
+  "prace-versus-duchovni-zivot",
+  "prekvapeni",
+  "pro-sebe",
+  "problemy-nebo-reseni",
+  "protoze-to-nevzdam",
+  "prvni-setkani-s-metodou-jih",
+  "sebelitost",
+  "sen-realita",
+  "skola-zivota",
+  "skvosty-zivota",
+  "strach",
+  "system-hlasi-chybu",
+  "vedome-leceni-s-andely",
+  "verim-v-boha",
+  "vidis-reseni",
+  "vnitrni-svet",
+  "vypnuti-versus-aktivni-klid",
+  "vznik-metody-jih-rozhovor",
+  "zatocte-s-unavou",
+  "zivot-jako-vnimani-a-pocity",
+  "zivot-v-kostce",
+  "zmena-jak-na-to",
+];
+
 const nextConfig: NextConfig = {
   async headers() {
     return [
@@ -47,7 +119,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Staré WordPress permalinky ?p=ID → kanonické cesty.
+      // Staré WordPress permalinky a adresy starého webu → nové stránky.
       {
         source: "/",
         has: [{ type: "query", key: "p", value: "622" }],
@@ -60,6 +132,22 @@ const nextConfig: NextConfig = {
       { source: "/najit-pruvodce", destination: "/najit-specialistu", permanent: true },
       { source: "/stan-se-pruvodcem", destination: "/stan-se-specialistou", permanent: true },
       { source: "/najit-terapeuta", destination: "/najit-specialistu", permanent: true },
+      { source: "/produkty-metoda-jih", destination: "/produkty", permanent: true },
+      { source: "/kurzy/cpt-m", destination: "/kurzy/cviceni-cpt-m", permanent: true },
+      { source: "/kurzy/vedome-tvoreni", destination: "/kurzy/vedome-tvoreni-vlastni-reality", permanent: true },
+      { source: "/kurzy/skola-pro-budouci-kouce", destination: "/stan-se-specialistou", permanent: true },
+      { source: "/vedome-tvoreni-vlastni-reality", destination: "/kurzy/vedome-tvoreni-vlastni-reality", permanent: true },
+      { source: "/andele-andelske-uceni", destination: "/kurzy/andelske-uceni", permanent: true },
+      // Archivy WordPressu (autoři, rubriky, štítky, výpis blogu, RSS) → úvod.
+      { source: "/:typ(author|category|tag)/:path*", destination: "/", permanent: true },
+      { source: "/blog-2/:path*", destination: "/", permanent: true },
+      { source: "/blog-2", destination: "/", permanent: true },
+      { source: "/feed", destination: "/", permanent: true },
+      { source: "/:path*/feed", destination: "/", permanent: true },
+      // Články starého blogu na nový web nepřešly. Zatím vedou na úvod DOČASNĚ
+      // (307), aby šly kdykoli obnovit — trvalé přesměrování si prohlížeče
+      // pamatují. Rozhodne Jarka (Trello karta k webu, 27. 10. 2026).
+      ...staryBlog.map((slug) => ({ source: `/${slug}`, destination: "/", permanent: false })),
     ];
   },
 };

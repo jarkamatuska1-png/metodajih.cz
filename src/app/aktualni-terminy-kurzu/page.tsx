@@ -17,7 +17,7 @@ const sekce: Sekce[] = [
     label: "On-line kurz",
     items: [
       { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky v rámci členské sekce Nikoly Usvaldové", url: "https://nikolausvaldova.cz/automaticka-kresba-diagnosticka" },
-      { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky s Bárou Maxovou", url: "https://www.baramaxova.cz/" },
+      { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky s Bárou Benešovou", url: "https://www.baramaxova.cz/" },
       { text: "Stálý on-line kurz Automatické kresby diagnostické pro začátečníky s Jarkou Matuškovou", url: "https://jarkamatuskova.cz/projekty/automaticka-kresba/" },
     ],
   },
@@ -39,7 +39,7 @@ const sekce: Sekce[] = [
     title: "Další kurzy metodou JIH®",
     label: "On-line i živé kurzy a přednášky",
     items: [
-      { text: "Sám sobě terapeutem — online kurz s navazující možností získat interní certifikaci Specialista metody JIH®, kurzem provází Bára Benešová Maxová a Hanka Mokrá; termín dalšího běhu najdete na webu kurzu", url: "https://www.baramaxova.cz/sam-sobe-terapeutem" },
+      { text: "Sám sobě terapeutem — online kurz s navazující možností získat interní certifikaci Specialista metody JIH®, kurzem provází Bára Benešová a Hanka Mokrá; termín dalšího běhu najdete na webu kurzu", url: "https://www.baramaxova.cz/sam-sobe-terapeutem" },
       { text: "Najdi svoji životní cestu — cyklus 10 živých workshopů s Majou Vodvářkovou v Litoměřicích; termín dalšího běhu najdete na webu kurzu", url: "https://moje.flixy.cz/maja2/p/najdi-svoji-ivotn-cestu-6hjddkccg" },
     ],
   },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { uvod, sekce, type Specialista } from "@/lib/specialiste";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 function Kontakty({ t }: { t: Specialista }) {
   const k = t.kontakt;
   const cls =
-    "text-[13px] text-[var(--gold-dark)] hover:text-[var(--gold)] transition-colors";
+    "inline-block py-1 text-[13px] text-[var(--gold-dark)] hover:text-[var(--gold)] transition-colors";
   return (
     <div className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1">
       {k.tel && <a href={`tel:${k.tel.replace(/\s/g, "")}`} className={cls}>{k.tel}</a>}
@@ -28,11 +29,12 @@ function Kontakty({ t }: { t: Specialista }) {
 function Karta({ t }: { t: Specialista }) {
   return (
     <div className="text-center">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={t.photo}
         alt={t.name}
-        loading="lazy"
+        width={112}
+        height={112}
+        sizes="112px"
         className="w-28 h-28 mx-auto rounded-full object-cover border border-[var(--gold-light)]"
       />
       <p className="mt-4 font-heading text-lg font-semibold">{t.name}</p>

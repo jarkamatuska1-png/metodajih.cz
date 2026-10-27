@@ -60,12 +60,12 @@ const ceny = [
 const reference = [
   {
     name: "Klára Mrazíková",
-    role: "Senior specialista metody JIH®",
+    role: "Senior specialistka metody JIH®",
     text: "Prvních pár měsíců bylo plných aha momentů o těle a jeho moudrosti. Druhá část o mysli byla intenzivnější — ale práce s klienty, když vidíš jejich obnovu, za to stojí.",
   },
   {
     name: "Šárka Bohuslavová",
-    role: "Specialista metody JIH®",
+    role: "Specialistka metody JIH®",
     text: "Nebyla to klasická výuka. Bylo to zaměřené na individualitu a vnímání. Postupem času se „nevím, ale musím“ změnilo na „mám záměr“.",
   },
 ];
